@@ -73,28 +73,29 @@ body, html {
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">ABOUT THE COMPANY</h3>
-  <p class="w3-center w3-large">"The untold stories behind your insurance policies."</p>
-  <p class="w3-center w3-large">"We tell you the truth that your insurance agent may not tell you."</p>
+  <p class="w3-center w3-large"><strong>Secrets about your insurance policies</strong></p>
+  <p class="w3-center w3-large">Approach us and we shall reveal the truth behind your insurance policies</p>
+  <p class="w3-center w3-large">Why you should approach us?</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fa fa-user-secret w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Professional</p>
-      <p>We are group of Professional insurance advisors</p>
+      <p>Professional Insurance Advisors are HERE!</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-money w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Financial Planner</p>
-      <p>Financial planners and risk management consultants who volunteer ourselves to help you planning for your future.</p>
+      <p class="w3-large">Stable Finance</p>
+      <p>Financial planners and Risk Management consultants are AVAILABLE to help you plan your future.</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-shield  w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>Protect your loved ones from potential financial risks.</p>
+      <p class="w3-large">Shield</p>
+      <p>Protect your loved ones from potential financial risks</p>
     </div>
     <div class="w3-quarter">
       <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Support</p>
-      <p>Our advice and seminars are completely FREE.</p>
+      <p>Advices and seminars are completely FREE!</p>
     </div>
   </div>
 </div>
@@ -116,48 +117,48 @@ body, html {
 <!-- Team Section -->
 <div class="w3-container" style="padding:128px 16px" id="team">
   <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
+  <p class="w3-center w3-large">The pillar of this company</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <img src="/img/team1.jpg" alt="Tony" style="width:100%">
         <div class="w3-container">
-          <h3>John Doe</h3>
+          <h3>Tony Well</h3>
           <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Making major corporate decisions, managing the overall operations and resources of a company.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <img src="/img/team2.jpg" alt="Michelle" style="width:100%">
         <div class="w3-container">
-          <h3>Anja Doe</h3>
+          <h3>Michelle Moses</h3>
           <p class="w3-opacity">Art Director</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Manages a creative initiative from start to finish, guiding a cross-functional creative team in the conception, design and execution of visual materials</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <img src="/img/team3.jpg" alt="Sam" style="width:100%">
         <div class="w3-container">
-          <h3>Mike Ross</h3>
+          <h3>Sam Smith</h3>
           <p class="w3-opacity">Web Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Create creative design and layout of a website or web pages</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <img src="/img/team4.jpg" alt="Wendy" style="width:100%">
         <div class="w3-container">
-          <h3>Dan Star</h3>
+          <h3>Wendy Kim</h3>
           <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p>Producing a host of ideas, selecting the best ones and selling them to the other members of the team and to clients.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
