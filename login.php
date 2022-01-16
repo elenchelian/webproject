@@ -1,3 +1,36 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "insurance");
+// Check connection
+if($conn === false){
+    die("ERROR: Could not connect. "
+        . mysqli_connect_error());
+}
+
+session_start();
+// If form submitted, insert values into the database.
+if (isset($_POST['email'])){
+        // removes backslashes
+    $email = stripslashes($_REQUEST['email']);
+        //escapes special characters in a string
+    $email = mysqli_real_escape_string($conn,$email);
+    $password = stripslashes($_REQUEST['password']);
+    $password = mysqli_real_escape_string($conn,$password);
+    //Checking is user existing in the database or not
+    $query = "SELECT * FROM admin WHERE email='$email'and password='$password'";
+    $result = mysqli_query($conn,$query) ;
+    $rows = mysqli_num_rows($result);
+        if($rows==1){
+        $_SESSION['email'] = $email;
+            // Redirect user to dashboard.php
+        header("Location: dashboard.php");
+         }else{
+
+
+    }
+    }else{
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <title>Admin Login</title>
@@ -15,9 +48,6 @@ body, html {
   height: 100%;
   line-height: 1.8;
 }
-
-
-
 .w3-bar .w3-button {
   padding: 16px;
 }
@@ -47,19 +77,26 @@ body, html {
 
 	<div class="screen">
 		<div class="screen__content">
-			<form class="login">
+			<form class="login" method="post">
 				<div class="login__field">
 					<i class="login__icon fa fa-user"></i>
-					<input type="text" class="login__input" placeholder="User name / Email">
+					<input type="text" name="email" class="login__input" placeholder="User name / Email">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fa fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password">
+					<input type="password" name ="password"class="login__input" placeholder="Password">
 				</div>
-				<button class="button login__submit">
+				<button class="button login__submit" type="submit">
 					<span class="button__text">Log In Now</span>
 					<i class="button__icon fa fa-chevron-right"></i>
 				</button>
+
+        <?php
+        if (isset ($_SESSION ['error'])){
+          echo('<p style ="color:red">'.htmlentities($_SESSION["error"])."</p>\n");
+          unset($_SESSION["error"]);
+        }
+        ?>
 			</form>
 		</div>
 		<div class="screen__background">
