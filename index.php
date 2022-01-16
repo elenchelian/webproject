@@ -63,7 +63,8 @@ body, html {
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-    <span class="w3-large">Getting insurance is YOUR responsibilty to your familty and loved once.You may hate it but it is your responsibilty.</span>
+    <span class="w3-large">Getting insurance is <strong> YOUR </strong> responsibility to your family and loved once. INSURANCE MATTERS.</span>
+    <span class="w3-large">Nothing is impossible; the word itself says ‘I’m possible!’ — Audrey Hepburn</span>
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more about us</a></p>
   </div>
 
