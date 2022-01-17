@@ -121,7 +121,7 @@ body, html {
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="team1.jpg" alt="Tony" style="width:100%"/>
+        <img src="/img/team1.jpg" alt="Tony" style="width:100%"/>
         <div class="w3-container">
           <h3>Tony Well</h3>
           <p class="w3-opacity">CEO & Founder</p>
@@ -169,19 +169,19 @@ body, html {
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
   <div class="w3-quarter">
-    <span class="w3-xxlarge">14+</span>
-    <br>Partners
+    <span class="w3-xxlarge">25+</span>
+    <br>Collaborators
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">55+</span>
+    <span class="w3-xxlarge">250+</span>
     <br>Projects Done
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">89+</span>
+    <span class="w3-xxlarge">500+</span>
     <br>Happy Clients
   </div>
   <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
+    <span class="w3-xxlarge">750+</span>
     <br>Meetings
   </div>
 </div>
@@ -236,23 +236,23 @@ body, html {
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h3>Our Skills.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
+      <p>Gather all the information regarding your insurance policies<br>
+      and deliver it to you with detailed explaination</p>
+      <p>Make you feel safe and secure. Plan your expenses wisely<br>
+      Be a guidance to make your future BETTER!</p>
     </div>
     <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
+      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Confidentiality</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:100%">100%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Safe and Secured</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
       </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Guaranteed Future</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
+        <div class="w3-container w3-dark-grey w3-center" style="width:80%">80%</div>
       </div>
     </div>
   </div>
@@ -260,18 +260,18 @@ body, html {
 
 <!-- Pricing Section -->
 <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-  <h3>PRICING</h3>
-  <p class="w3-large">Choose a pricing plan that fits your needs.</p>
+  <h3>SEMINAR</h3>
+  <p class="w3-large">Choose a seminar that fits your needs.</p>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-black w3-xlarge w3-padding-32">Seminar A</li>
+        <li class="w3-padding-16"><b>GENERAL GUIDANCE</b></li>
+        <li class="w3-padding-16"><b>2</b> Insurance Advisors</li>
+        <li class="w3-padding-16"><b>-</b></li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 10</h2>
+          <h2 class="w3-wide">RM 50</h2>
           <span class="w3-opacity">per month</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
@@ -281,13 +281,13 @@ body, html {
     </div>
     <div class="w3-third">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
+        <li class="w3-red w3-xlarge w3-padding-48">Seminar B</li>
+        <li class="w3-padding-16"><b>POLICY BREAKDOWN</b></li>
+        <li class="w3-padding-16"><b>1</b> Professional Insurance Advisors</li>
+        <li class="w3-padding-16"><b>2</b> Financial Planners</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 25</h2>
+          <h2 class="w3-wide">RM 100</h2>
           <span class="w3-opacity">per month</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
@@ -297,13 +297,13 @@ body, html {
     </div>
     <div class="w3-third w3-section">
       <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
+        <li class="w3-black w3-xlarge w3-padding-32">Seminar C</li>
+        <li class="w3-padding-16"><b>PLAN YOUR FUTURE</b></li>
+        <li class="w3-padding-16"><b>2</b> Risk Management Consultants</li>
+        <li class="w3-padding-16"><b>3</b> Financial Planners</li>
         <li class="w3-padding-16"><b>Endless</b> Support</li>
         <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 50</h2>
+          <h2 class="w3-wide">RM 200</h2>
           <span class="w3-opacity">per month</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
@@ -319,9 +319,9 @@ body, html {
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Kuala Lumpur, Malaysia</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +60 167849256</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: insurancemail@gmail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
