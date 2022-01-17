@@ -242,15 +242,15 @@ body, html {
       Be a guidance to make your future BETTER!</p>
     </div>
     <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-lock w3-margin-right"></i>Confidentiality</p>
+      <p class="w3-wide"><i class="fa fa-user-secret w3-margin-right"></i>Confidentiality</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-center" style="width:100%">100%</div>
       </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Safe and Secured</p>
+      <p class="w3-wide"><i class="fa fa-lock w3-margin-right"></i>Safe and Secured</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
       </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Guaranteed Future</p>
+      <p class="w3-wide"><i class="fa fa-handshake-o w3-margin-right"></i>Guaranteed Future</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-center" style="width:80%">80%</div>
       </div>
