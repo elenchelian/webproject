@@ -242,7 +242,7 @@ body, html {
       Be a guidance to make your future BETTER!</p>
     </div>
     <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Confidentiality</p>
+      <p class="w3-wide"><i class="fa fa-secure w3-margin-right"></i>Confidentiality</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-center" style="width:100%">100%</div>
       </div>
