@@ -157,7 +157,7 @@
                       <td><?php echo $name;?></td>
                       <td><?php echo $email;?></td>
                       <td><button type="button" class="btn btn-success">Edit Profile</button></td>
-                      <td><button type="button" onclick="return confirm('Are you sure want to Suspend this <?php echo $name;?> account?');"  class="btn btn-danger">Suspend</button></td>
+                      <td><a href="delete_admin.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Suspend this <?php echo $name;?> account?');">Delete</a></td>
                     </tr>
                     <?php
                         }
