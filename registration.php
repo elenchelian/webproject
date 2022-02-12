@@ -1,3 +1,7 @@
+
+<!DOCTYPE html>
+<html>
+<title>Seminar Regisration</title>
 <style>
 $yellow:#f5ba1a;
 $black:#000000;
@@ -362,6 +366,7 @@ body {
 	}
 }
 </style>
+<body>
 <div class="form_wrapper">
   <div class="form_container">
     <div class="title_container">
@@ -420,3 +425,5 @@ body {
   </div>
 </div>
 <p class="credit">Developed by <a href="http://www.designtheway.com" target="_blank">Design the way</a></p>
+</body>
+</html>
