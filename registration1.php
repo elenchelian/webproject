@@ -408,7 +408,7 @@ body {
     <div class="row clearfix">
       <div class="">
         <form>
-          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+          <div class="input_field"> <span><i class="fa fa-envelope"></i></span>
             <input type="email" name="email" placeholder="Email" required />
           </div>
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
