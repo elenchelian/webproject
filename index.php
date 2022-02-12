@@ -292,7 +292,7 @@ body, html {
           <th>DATE</th>
           <th>TIME</th>
           <th>VENUE</th>
-          
+
         </tr>
       </thead>
       <tbody>
@@ -321,6 +321,12 @@ body, html {
          ?>
       </tbody>
     </table>
+    <br><br>
+    <div style="align:center">
+    <button class="w3-button w3-green" type="submit">
+       REGISTER FOR THE SEMINAR
+    </button>
+  </div>
   </div>
 </div>
 
