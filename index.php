@@ -322,9 +322,10 @@ body, html {
     </table>
     <br><br>
     <div style="align:center">
-    <button class="w3-button w3-green" type="submit" window.location.href="registration1.php">
+    <button class="w3-button w3-green" type="submit">
        REGISTER FOR THE SEMINAR
     </button>
+    header ("Location: registration1.php");
   </div>
   </div>
 </div>
