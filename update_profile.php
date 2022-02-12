@@ -1,3 +1,33 @@
+<?php
+require_once "pdo.php";
+session_start();
+if ( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['id']) ) {
+    $sql = "UPDATE admin SET name = :name,
+             email = :email, password = :password
+            WHERE id = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(
+        ':name' => $_POST['name'],
+        ':email' => $_POST['email'],
+        ':password' => $_POST['password'],
+        ':id' => $_POST['id']));
+    $_SESSION['success'] = 'Record updated';
+    header( 'Location: index.php' ) ;
+    return;
+}
+$stmt = $pdo->prepare("SELECT * FROM admin where id = :1");
+$stmt->execute(array(":1" => $_GET['id']));
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+if ( $row === false ) {
+    $_SESSION['error'] = 'Bad value for user_id';
+    header( 'Location: index.php' ) ;
+    return;
+}
+$n = htmlentities($row['name']);
+$e = htmlentities($row['email']);
+$p = htmlentities($row['password']);
+$id = $row['id'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -134,16 +164,16 @@
                         <div class="brand-logo">
                           <img src="img/logo.png" alt="logo" style="align : center">
                         </div>
-                        <h4>Add Admin Account</h4>
-                        <h6 class="font-weight-light">Create a new Admin Profile</h6>
+                        <h4>Update Profile Details</h4>
+                        <!-- <h6 class="font-weight-light"></h6> -->
 
                         <form class="pt-3" method="post" action="add.php">
                           <!-- <p type="text"style="color:#FF0000;"><?php echo $status?></p> -->
                           <div class="form-group">
-                            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="name">
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email">
                           </div>
                           <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="name">
                           </div>
                           <div class="form-group">
                             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">

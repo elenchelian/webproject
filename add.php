@@ -13,8 +13,7 @@
         $password = $_REQUEST['password'];
         $email =  $_REQUEST['email'];
 
-        $sql = "INSERT INTO admin VALUES ('id','$name',
-            '$email','$password')";
+        $sql = "INSERT INTO admin VALUES ('id','$name','$email','$password')";
 
         if(mysqli_query($conn, $sql)){
           $status = "Admin Added Successfully.";
