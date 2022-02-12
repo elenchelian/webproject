@@ -437,7 +437,7 @@ body {
               </div>
               <div class="input_field select_option">
                 <select>
-                  <option>Select a country</option>
+                  <option disabled>Select a country</option>
                   <option>Malaysia</option>
                   <option>Singapore</option>
                   <option>Indonesia</option>
