@@ -322,10 +322,9 @@ body, html {
     </table>
     <br><br>
     <div style="align:center">
-    <button class="w3-button w3-green" type="submit">
-       REGISTER FOR THE SEMINAR
-       header ("Location: registration1.php");
-    </button>
+      <form method="POST" action="registration1.php">
+        <button class="w3-button w3-green" type="submit"> REGISTER FOR THE SEMINAR </button>
+      </form>
   </div>
   </div>
 </div>
