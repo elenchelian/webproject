@@ -121,8 +121,8 @@ body, html {
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/img/bg1.jpg" alt="Tony" style="width:100%"/>
         <div class="w3-container">
+          <img src="/img/bg1.jpg" alt="Tony" style="width:100%"/>
           <h3>Tony Well</h3>
           <p class="w3-opacity">CEO & Founder</p>
           <p>Making major corporate decisions, managing the overall operations and resources of a company.</p>
