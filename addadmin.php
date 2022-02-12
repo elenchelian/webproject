@@ -137,7 +137,7 @@
                         <h4>Add Admin Account</h4>
                         <h6 class="font-weight-light">Create a new Admin Profile</h6>
 
-                        <form class="pt-3" method="post" action="add.php">
+                        <form class="pt-3" method="post" action="add.php?add">
                           <!-- <p type="text"style="color:#FF0000;"><?php echo $status?></p> -->
                           <div class="form-group">
                             <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="name">

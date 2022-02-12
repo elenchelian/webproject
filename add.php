@@ -1,29 +1,39 @@
-<?php
+        <!DOCTYPE html>
 
-        $conn = mysqli_connect("localhost", "root", "", "insurance");
+        <html lang="en">
 
-        // Check connection
-        if($conn === false){
-            die("ERROR: Could not connect. "
-                . mysqli_connect_error());
-        }
-
-        // Taking all 5 values from the form data(input)
+        <head>
+          <script src="package/dist/sweetalert2.js"></script>
+          <link rel="stylesheet" href="package/dist/sweetalert2.css">
+        </head>
+        <body
+        <?php
+        $connection = mysqli_connect("localhost", "root", "", "insurance");
+        if(isset($_GET['add'])){
+        $id =$_GET['add'];
         $name =  $_REQUEST['name'];
         $password = $_REQUEST['password'];
         $email =  $_REQUEST['email'];
 
         $sql = "INSERT INTO admin VALUES ('id','$name','$email','$password')";
 
-        if(mysqli_query($conn, $sql)){
-          $status = "Admin Added Successfully.";
-     header('Location:addadmin.php');
-          return;
-        } else{
-            echo "ERROR: Hush! Sorry $sql. "
-                . mysqli_error($conn);
+        $result = $connection-> query($sql);
         }
-
-        // Close connection
-        mysqli_close($conn);
         ?>
+
+        <body onload="JSalert()">
+        <script type="text/javascript">
+        function JSalert(){
+          Swal({
+            position: 'center',
+            type: 'success',
+            title: 'Admin Account has been created',
+            showConfirmButton: false,
+            timer: 1500
+          }).then(function() {
+            window.location = "dashboard.php";
+        });
+        }
+        </script>
+        </body>
+        </html>
