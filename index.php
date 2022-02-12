@@ -324,8 +324,8 @@ body, html {
     <div style="align:center">
     <button class="w3-button w3-green" type="submit">
        REGISTER FOR THE SEMINAR
+       header ("Location: registration1.php");
     </button>
-    header ("Location: registration1.php");
   </div>
   </div>
 </div>
