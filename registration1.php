@@ -403,7 +403,7 @@ body {
 <div class="form_wrapper">
   <div class="form_container">
     <div class="title_container">
-      <h2>Responsive Registration Form</h2>
+      <h2>Seminar Registration Form</h2>
     </div>
     <div class="row clearfix">
       <div class="">
@@ -437,7 +437,7 @@ body {
               </div>
               <div class="input_field select_option">
                 <select>
-                  <option selected="true" disabled="disabled">Select a country</option> 
+                  <option selected="true" disabled="disabled">Select a country</option>
                   <option>Malaysia</option>
                   <option>Singapore</option>
                   <option>Indonesia</option>
