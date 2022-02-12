@@ -43,14 +43,14 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
+              <img src="img/elen.png" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
+              <a class="dropdown-item" href="update_profile.php">
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
-              <a class="dropdown-item">
+              <a class="dropdown-item" href="login.php">
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a>
@@ -102,7 +102,7 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Admin List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="adminlist.php">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
                 <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
               </ul>
@@ -116,7 +116,8 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="">Register Seminar</a></li>
+                <li class="nav-item"><a class="nav-link" href="reg_seminar.php">Register Seminar</a></li>
+                <li class="nav-item"><a class="nav-link" href="seminar_list.php">Seminar List</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Partcipants List</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Assign Agent</a></li>
               </ul>
