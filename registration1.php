@@ -438,18 +438,16 @@ body {
               <div class="input_field select_option">
                 <select>
                   <option>Select a country</option>
-                  <option>Option 1</option>
-                  <option>Option 2</option>
+                  <option>Malaysia</option>
+                  <option>Singapore</option>
+                  <option>Indonesia</option>
+                  <option>Thailand</option>
                 </select>
                 <div class="select_arrow"></div>
               </div>
             <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb1">
     			<label for="cb1">I agree with terms and conditions</label>
-            </div>
-            <div class="input_field checkbox_option">
-            	<input type="checkbox" id="cb2">
-    			<label for="cb2">I want to receive the newsletter</label>
             </div>
           <input class="button" type="submit" value="Register" />
         </form>
