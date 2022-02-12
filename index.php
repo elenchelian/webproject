@@ -26,6 +26,26 @@ body, html {
   padding: 16px;
 }
 </style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
+</head>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -260,57 +280,46 @@ body, html {
 
 <!-- Pricing Section -->
 <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-  <h3>SEMINAR</h3>
-  <p class="w3-large">Choose a seminar that fits your needs.</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Seminar A</li>
-        <li class="w3-padding-16"><b>GENERAL GUIDANCE</b></li>
-        <li class="w3-padding-16"><b>2</b> Insurance Advisors</li>
-        <li class="w3-padding-16"><b>-</b></li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">RM 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-red w3-xlarge w3-padding-48">Seminar B</li>
-        <li class="w3-padding-16"><b>POLICY BREAKDOWN</b></li>
-        <li class="w3-padding-16"><b>1</b> Professional Insurance Advisors</li>
-        <li class="w3-padding-16"><b>2</b> Financial Planners</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">RM 100</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Seminar C</li>
-        <li class="w3-padding-16"><b>PLAN YOUR FUTURE</b></li>
-        <li class="w3-padding-16"><b>2</b> Risk Management Consultants</li>
-        <li class="w3-padding-16"><b>3</b> Financial Planners</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">RM 200</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
+  <h4 class="card-title">Seminar List</h4>
+
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>TOPIC</th>
+          <th>DATE</th>
+          <th>TIME</th>
+          <th>VENUE</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <?php   // LOOP TILL END OF DATA
+        $conn = mysqli_connect("localhost", "root", "", "insurance");
+        $sql_member = "SELECT * from seminar ORDER BY id ASC;";
+        $result_member = $conn-> query($sql_member);
+        while($row =mysqli_fetch_array($result_member,MYSQLI_ASSOC)){
+                                 $id=$row['id'];
+                                 $topic=$row['topic'];
+                                 $date=$row['date'];
+                                 $time=$row['time'];
+                                 $venue=$row['venue'];
+
+         ?>
+        <tr>
+          <td><?php echo $id;?></td>
+          <td><?php echo $topic;?></td>
+          <td><?php echo $date;?></td>
+          <td><?php echo $time;?></td>
+          <td><?php echo $venue;?></td>
+
+        </tr>
+        <?php
+            }
+         ?>
+      </tbody>
+    </table>
   </div>
 </div>
 

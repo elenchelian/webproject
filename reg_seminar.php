@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin Dashboard</title>
+  <title>Skydash Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -126,18 +127,51 @@
         <div class="row">
           <div class="col-md-12 grid-margin">
             <div class="row">
-              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                <h3 class="font-weight-bold">Welcome Admin</h3>
-                <h6 class="font-weight-normal mb-0">Check all the activities on the website</h6>
-              </div>
-              <div class="col-12 col-xl-4">
-               <div class="justify-content-end d-flex">
+              <div class="container-fluid page-body-wrapper full-page-wrapper">
+                <div class="content-wrapper d-flex align-items-center auth px-0">
+                  <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                      <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                        <div class="brand-logo">
+                          <img src="img/logo.png" alt="logo" style="align : center">
+                        </div>
+                        <h4>Register New Seminar</h4>
+                        <h6 class="font-weight-light">Provide the seminar details</h6>
 
-               </div>
+                        <form class="pt-3" method="post" action="reg_function.php?add">
+                          <!-- <p type="text"style="color:#FF0000;"><?php echo $status?></p> -->
+                          <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Seminar Topic" name="topic">
+                          </div>
+                          <div class="form-group">
+                            <input type="date" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Date" name="date">
+                          </div>
+                          <div class="form-group">
+                            <input type="time" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Time" name="time">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Venue" name="venue">
+                          </div>
+                          <div class="mt-3">
+                            <input class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" name="submit" value="Add Seminar">
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- content-wrapper ends -->
               </div>
             </div>
           </div>
         </div>
+
+
+          <!-- page-body-wrapper ends -->
+
+
+
       </div>
     </div>
     <!-- End of main container -->

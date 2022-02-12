@@ -1,3 +1,34 @@
+<?php
+require_once "pdo.php";
+session_start();
+if ( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['id']) ) {
+    $sql = "UPDATE admin SET name = :name,
+             email = :email, password = :password
+            WHERE id = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(
+        ':name' => $_POST['name'],
+        ':email' => $_POST['email'],
+        ':password' => $_POST['password'],
+        ':id' => $_POST['id']));
+    $_SESSION['success'] = 'Record updated';
+    header( 'Location: index.php' ) ;
+    return;
+}
+$stmt = $pdo->prepare("SELECT * FROM admin where id = :1");
+$stmt->execute(array(":1" => $_GET['id']));
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+if ( $row === false ) {
+    $_SESSION['error'] = 'Bad value for user_id';
+    header( 'Location: index.php' ) ;
+    return;
+}
+$n = htmlentities($row['name']);
+$e = htmlentities($row['email']);
+$p = htmlentities($row['password']);
+$id = $row['id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +36,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin Dashboard</title>
+  <title>Skydash Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -37,14 +68,14 @@
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="img/elen.png" alt="profile"/>
+              <img src="images/faces/face28.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="update_profile.php">
+              <a class="dropdown-item">
                 <i class="ti-settings text-primary"></i>
                 Settings
               </a>
-              <a class="dropdown-item" href="login.php">
+              <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a>
@@ -96,7 +127,7 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="adminlist.php">Admin List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
                 <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
               </ul>
@@ -110,8 +141,7 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="reg_seminar.php">Register Seminar</a></li>
-                <li class="nav-item"><a class="nav-link" href="seminar_list.php">Seminar List</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Register Seminar</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Partcipants List</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Assign Agent</a></li>
               </ul>
@@ -126,18 +156,48 @@
         <div class="row">
           <div class="col-md-12 grid-margin">
             <div class="row">
-              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                <h3 class="font-weight-bold">Welcome Admin</h3>
-                <h6 class="font-weight-normal mb-0">Check all the activities on the website</h6>
-              </div>
-              <div class="col-12 col-xl-4">
-               <div class="justify-content-end d-flex">
+              <div class="container-fluid page-body-wrapper full-page-wrapper">
+                <div class="content-wrapper d-flex align-items-center auth px-0">
+                  <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                      <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                        <div class="brand-logo">
+                          <img src="img/logo.png" alt="logo" style="align : center">
+                        </div>
+                        <h4>Update Profile Details</h4>
+                        <!-- <h6 class="font-weight-light"></h6> -->
 
-               </div>
+                        <form class="pt-3" method="post" action="add.php">
+                          <!-- <p type="text"style="color:#FF0000;"><?php echo $status?></p> -->
+                          <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="name">
+                          </div>
+                          <div class="form-group">
+                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">
+                          </div>
+                          <div class="mt-3">
+                            <input class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" name="submit" value="CREATE ACCOUNT">
+                          </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- content-wrapper ends -->
               </div>
             </div>
           </div>
         </div>
+
+
+          <!-- page-body-wrapper ends -->
+
+
+
       </div>
     </div>
     <!-- End of main container -->

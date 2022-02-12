@@ -1,3 +1,9 @@
+<?php
+        $conn = mysqli_connect("localhost", "root", "", "insurance");
+        $sql_member = "SELECT * from seminar ORDER BY id ASC;";
+        $result_member = $conn-> query($sql_member);
+
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +11,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin Dashboard</title>
+  <title>Skydash Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -123,21 +129,56 @@
       <!-- Main Dashboard container -->
     <div class="main-panel">
       <div class="content-wrapper">
-        <div class="row">
-          <div class="col-md-12 grid-margin">
-            <div class="row">
-              <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                <h3 class="font-weight-bold">Welcome Admin</h3>
-                <h6 class="font-weight-normal mb-0">Check all the activities on the website</h6>
-              </div>
-              <div class="col-12 col-xl-4">
-               <div class="justify-content-end d-flex">
+        <div style="margin:auto; width:auto" class="">
+          <div  class="">
+            <div style="margin:auto; " class="card-body" >
+              <h4 class="card-title">Seminar List</h4>
 
-               </div>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>TOPIC</th>
+                      <th>DATE</th>
+                      <th>TIME</th>
+                      <th>VENUE</th>
+                      <th>DELETE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php   // LOOP TILL END OF DATA
+                    while($row =mysqli_fetch_array($result_member,MYSQLI_ASSOC)){
+                                             $id=$row['id'];
+                                             $topic=$row['topic'];
+                                             $date=$row['date'];
+                                             $time=$row['time'];
+                                             $venue=$row['venue'];
+
+                     ?>
+                    <tr>
+                      <td><?php echo $id;?></td>
+                      <td><?php echo $topic;?></td>
+                      <td><?php echo $date;?></td>
+                      <td><?php echo $time;?></td>
+                      <td><?php echo $venue;?></td>
+                      <td><a href="delete_seminar.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> seminar?');">Delete</a></td>
+                    </tr>
+                    <?php
+                        }
+                     ?>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
+
+
+          <!-- page-body-wrapper ends -->
+
+
+
       </div>
     </div>
     <!-- End of main container -->
