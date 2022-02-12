@@ -322,7 +322,7 @@ body, html {
     </table>
     <br><br>
     <div style="align:center">
-    <button class="w3-button w3-green" type="submit" href="registration.php">
+    <button class="w3-button w3-green" type="submit" href="registration1.php">
        REGISTER FOR THE SEMINAR
     </button>
   </div>
