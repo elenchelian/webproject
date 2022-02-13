@@ -46,10 +46,7 @@
               <img src="img/elen.png" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="update_profile.php">
-                <i class="ti-settings text-primary"></i>
-                Settings
-              </a>
+              
               <a class="dropdown-item" href="login.php">
                 <i class="ti-power-off text-primary"></i>
                 Logout
@@ -163,14 +160,15 @@
                                              $id=$row['id'];
                                              $name=$row['name'];
                                              $email=$row['email'];
+                                          //   $password=$row['password'];
 
                      ?>
                     <tr>
                       <td><?php echo $id;?></td>
                       <td><?php echo $name;?></td>
                       <td><?php echo $email;?></td>
-                      <td><button type="button" class="btn btn-success">Edit Profile</button></td>
-                      <td><a href="delete_admin.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Suspend this <?php echo $name;?> account?');">Delete</a></td>
+                      <td><a href="update_profile.php?update=<?php echo $id;?>& name=<?php echo $name;?>&email=<?php echo $email;?>" class="btn btn-success">Edit Profile</a></td>
+                      <td><a href="delete_admin.php?delete=<?php echo $id;?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Suspend this <?php echo $name;?> account?');">Delete</a></td>
                     </tr>
                     <?php
                         }
