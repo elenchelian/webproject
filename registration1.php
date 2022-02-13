@@ -430,9 +430,9 @@ body {
     background: #f1f1f1;
     outline: 2px dashed #a8b9ff;
     outline-offset: -10px;
-    padding: 50px 0px 100px 250px;
+    padding: 50px 0px 100px 200px;
     text-align: center !important;
-    width: 300px;
+    width: 350px;
 }
 
 .upload-container input:hover {
@@ -442,7 +442,7 @@ body {
 .upload-container:before {
     position: absolute;
     bottom: 50px;
-    left: 150px;
+    left: 175px;
     content: " (or) Drag and Drop files here. ";
     color: #2f54eb;
     font-weight: 900;
@@ -450,6 +450,7 @@ body {
 
 .upload-btn {
     margin-left: 100px;
+
     padding: 7px 20px;
 }
 
