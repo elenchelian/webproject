@@ -122,7 +122,7 @@ body, html {
 
 <!-- Team Section -->
 <div class="w3-container" style="padding:128px 16px" id="team">
-  <h3 class="w3-center">THE TEAM</h3>
+  <h3 class="w3-center">MEET THE TEAM</h3>
   <p class="w3-center w3-large">The pillar of this company</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
@@ -134,6 +134,7 @@ body, html {
           <p class="w3-opacity">CEO & Founder</p>
           <p>Making major corporate decisions, managing the overall operations and resources of a company.</p>
           <br>
+          <br>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
@@ -143,8 +144,9 @@ body, html {
         <img src="img/team12.png" alt="team2" style="width:100%"/>
         <div class="w3-container" style="padding:20px 16px">
           <h3><b>Michelle Moses</b></h3>
-          <p class="w3-opacity">Art Director</p>
-          <p>Manages a creative initiative from start to finish, guiding a cross-functional creative team in the conception, design and execution of visual materials</p>
+          <p class="w3-opacity">Actuary</p>
+          <p>Apply math and calculate premiums, forecast potential impact of catastrophes, analyze insurance rates for cars, homes, businesses and belongings.</p>
+          <br>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
@@ -154,9 +156,8 @@ body, html {
         <img src="img/team13.png" alt="team3" style="width:100%">
         <div class="w3-container" style="padding:20px 16px">
           <h3><b>Sam Smith</b></h3>
-          <p class="w3-opacity">Web Designer</p>
-          <p>Create creative design and layout of a website or web pages</p>
-          <br>
+          <p class="w3-opacity">Marketing Representative</p>
+          <p>Create marketing strategies, conduct market research, develop brand positioning and promotional materials to develop and deliver products and services to meet customer needs.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
@@ -166,8 +167,8 @@ body, html {
         <img src="img/team14.png" alt="team4" style="width:100%">
         <div class="w3-container" style="padding:20px 16px">
           <h3><b>Wendy Kim</b></h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Producing a host of ideas, selecting the best ones and selling them to the other members of the team and to clients.</p>
+          <p class="w3-opacity">Loss Control Specialist</p>
+          <p> Inspect and identify potential risks related to fire, crime, liability or accidents, understand large commercial and manufacturing risks where there are complex processes and many exposures to loss.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
