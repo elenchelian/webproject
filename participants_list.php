@@ -184,10 +184,10 @@
                       <td><?php echo $seminar;?></td>
                       <td><?php echo $agent;?></td>
                       <td><a href="delete_participants.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> participant?');">Delete</a></td>
-                    
+
                       <td>
                         <form  action="mailto:<?php echo $email;?>" method="post" enctype="text/plain" target="_blank">
-                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value=" Dear <?php echo $name;?> you application for <?php echo $seminar;?> has been aproved.Hopefully you can make to the seminar"></p>
+                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value=" Dear <?php echo $name;?> your application for <?php echo $seminar;?> has been approved. Hope to see you in the seminar. Have a Good Day!"></p>
                         <button type="submit" class="btn btn-success">Send Email</button>
                       </form>
                       </td>

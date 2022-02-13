@@ -210,7 +210,7 @@
                       </form>
                       <td>
                         <form  action="mailto:<?php echo $agent;?>" method="post" enctype="text/plain" target="_blank">
-                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value="Dear Agent please contact <?php echo $name;?> <?php echo "\r\n"?> email :<?php echo $email;?> <?php echo "\r\n"?> Contact Number : <?php echo $phone_number;?> and provide them about the seminar details and please remind them one day before the seminar also."></p>
+                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value="Dear Agent please contact <?php echo $name;?> <?php echo "\r\n"?> Email :<?php echo $email;?> <?php echo "\r\n"?> Contact Number : <?php echo $phone_number;?> to provide some important details regarding the seminar to the participants. Please remind them again one day prior to the seminar."></p>
                         <button type="submit" class="btn btn-success">Send Email</button>
                       </form>
                       </td>
