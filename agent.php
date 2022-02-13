@@ -22,7 +22,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'The Agent has been Assingned ',
+    title: 'The agent has been assingned successfully',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {

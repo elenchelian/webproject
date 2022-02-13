@@ -21,7 +21,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'The Participant Has Been Deleted',
+    title: 'The participant has been deleted',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {

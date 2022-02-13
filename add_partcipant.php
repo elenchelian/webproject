@@ -42,7 +42,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'Successfully Registered for the Seminar',
+    title: 'Successfully registered for the seminar',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {

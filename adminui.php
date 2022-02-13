@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>Update Admin</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -98,7 +98,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li> -->
               </ul>
             </div>
           </li>
@@ -134,7 +134,7 @@
                           <img src="img/logo.png" alt="logo" style="align : center">
                         </div>
                         <h4>Manage Account</h4>
-                        <h6 class="font-weight-light">Update your profile details here.</h6>
+                        <h6 class="font-weight-light">Update your profile details here</h6>
                         <form class="pt-3">
                           <div class="form-group">
                             <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name">

@@ -11,7 +11,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>Participants List</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -101,7 +101,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="adminlist.php">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li> -->
               </ul>
             </div>
           </li>
@@ -184,10 +184,10 @@
                       <td><?php echo $seminar;?></td>
                       <td><?php echo $agent;?></td>
                       <td><a href="delete_participants.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> participant?');">Delete</a></td>
-                    
+
                       <td>
                         <form  action="mailto:<?php echo $email;?>" method="post" enctype="text/plain" target="_blank">
-                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value=" Dear <?php echo $name;?> you application for <?php echo $seminar;?> has been aproved.Hopefully you can make to the seminar"></p>
+                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value=" Dear <?php echo $name;?> your application for <?php echo $seminar;?> has been approved. Hope to see you in the seminar. Have a Good Day!"></p>
                         <button type="submit" class="btn btn-success">Send Email</button>
                       </form>
                       </td>

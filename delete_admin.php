@@ -21,7 +21,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'Your have delete account admin ',
+    title: 'Admin Account has been successfully deleted',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {

@@ -21,7 +21,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'Seminar Has Been Deleted',
+    title: 'Seminar has been deleted successfully',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {
