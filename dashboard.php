@@ -113,7 +113,19 @@
                 <li class="nav-item"><a class="nav-link" href="reg_seminar.php">Register Seminar</a></li>
                 <li class="nav-item"><a class="nav-link" href="seminar_list.php">Seminar List</a></li>
                 <li class="nav-item"><a class="nav-link" href="participants_list.php">Partcipants List</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Assign Agent</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#agent-element" aria-expanded="false" aria-controls="agent-element">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Agent</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="agent-element">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="add_agents.php">Add Agent</a></li>
+                <li class="nav-item"><a class="nav-link" href="assign_agent.php">Assign Agent</a></li>
               </ul>
             </div>
           </li>

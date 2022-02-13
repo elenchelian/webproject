@@ -1,11 +1,4 @@
-<?php
-        $conn = mysqli_connect("localhost", "root", "", "insurance");
-        $sql_member = "SELECT * from participants ORDER BY id ASC;";
-        $result_member = $conn-> query($sql_member);
 
-
-
-        ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,83 +120,44 @@
           </li>
         </ul>
       </nav>
-
       <!-- Main Dashboard container -->
     <div class="main-panel">
       <div class="content-wrapper">
-        <div style="margin:auto; width:auto" class="">
-          <div  class="">
-            <div style="margin:auto; " class="card-body" >
-              <h4 class="card-title">Assign Agent</h4>
+        <div class="row">
+          <div class="col-md-12 grid-margin">
+            <div class="row">
+              <div class="container-fluid page-body-wrapper full-page-wrapper">
+                <div class="content-wrapper d-flex align-items-center auth px-0">
+                  <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                      <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                        <div class="brand-logo">
+                          <img src="img/logo.png" alt="logo" style="align : center">
+                        </div>
+                        <h4>Add Agentst</h4>
+                        <h6 class="font-weight-light">Create a new Agent Profile</h6>
 
-              <div class="table-responsive">
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>NAME</th>
-                      <th>OCCUPATION</th>
-                      <th>PHONE NUMBER</th>
-                      <th>EMAIL</th>
-                      <th>SEMINAR</th>
-                      <th>AGENT</th>
-                      <th>AGENT LIST</th>
-                      <th>Assign</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php   // LOOP TILL END OF DATA
+                        <form class="pt-3" method="post" action="add_agent_fx.php?add">
+                          <!-- <p type="text"style="color:#FF0000;"><?php echo $status?></p> -->
+                          <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="name">
+                          </div>
+                          <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email">
+                          </div>
+                          <div class="form-group">
+                            <input type="number" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Phone Number" name="phone">
+                          </div>
+                          <div class="mt-3">
+                            <input class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" name="submit" value="CREATE AGENT ACCOUNT">
+                          </div>
 
-                    while($row =mysqli_fetch_array($result_member,MYSQLI_ASSOC)){
-                                             $id=$row['id'];
-                                             $name=$row['name'];
-                                             $occupation=$row['occupation'];
-                                             $phone_number=$row['phone_number'];
-                                             $email=$row['email'];
-                                             $seminar=$row['seminar'];
-                                             $agent=$row['agent'];
-
-                     ?>
-                    <tr>
-                      <td><?php echo $id;?></td>
-                      <td><?php echo $name;?></td>
-                      <td><?php echo $occupation;?></td>
-                      <td><?php echo $phone_number;?></td>
-                      <td><?php echo $email;?></td>
-                      <td><?php echo $seminar;?></td>
-                      <td><?php echo $agent;?></td>
-
-
-                      <td>
-
-
-                      <div class="input_field select_option">
-                        <select name="agent">
-                          <option selected="true" disabled="disabled">Select a Agent</option>
-                          <?php
-                          $sql_agent = "SELECT * from agent ORDER BY id ASC;";
-                          $result_agent = $conn-> query($sql_agent);
-                                  while($row = mysqli_fetch_array($result_agent)){
-                                    $id = $row['id'];
-                                    $agent = $row['name'];
-                                      ?>
-                          <option value="<?php echo $agent?>"><?php echo $agent?></option>
-                          <?php
-                              }
-                           ?>
-                        </select>
-
+                        </form>
                       </div>
-
-                    </td>
-
-                      <td><a href="agent.php?update=<?php echo $id;?>" class="btn btn-success" onclick="return confirm('Are you sure want to Assig Agent for <?php echo $name;?> participant?');">Assign Agent</a></td>
-                    </tr>
-                    <?php
-                        }
-                     ?>
-                  </tbody>
-                </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- content-wrapper ends -->
               </div>
             </div>
           </div>
