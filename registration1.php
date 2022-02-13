@@ -513,7 +513,7 @@ body {
               </div>
 
               <div class="upload-container">
-        			     <input type="file" id="file_upload" name="my_file"  multiple />
+        			     <input type="file" id="file_upload" name="file1"  multiple />
     			    </div>
               <br>
 
