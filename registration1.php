@@ -14,7 +14,7 @@ body {
 	 font-size: 14px;
    animation: move 10s ease infinite;
    transform: translate3d(0, 0, 0);
-   background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+   background: linear-gradient(45deg, #2d2e2d 10%, #A2C7E5 90%);
    height: 100vh
 }
  .clearfix:after {
@@ -26,14 +26,15 @@ body {
 }
  .form_wrapper {
 	 background: #fff;
-	 width: 400px;
+	 width: 600px;
+   /* height: 600px; */
 	 max-width: 100%;
 	 box-sizing: border-box;
 	 padding: 25px;
 	 margin: 8% auto 0;
 	 position: relative;
 	 z-index: 1;
-	 border-top: 5px solid #f5ba1a;
+	 border-top: 5px solid #3e5fe6;
 	 -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	 -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	 box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -121,7 +122,7 @@ body {
 	 background: #fafafa;
 }
 .backbtn{
-  background: #f5ba1a;
+  background: #9aa9e6;
   height: 35px;
   line-height: 35px;
   width: 100%;
@@ -134,7 +135,7 @@ body {
 
 }
  .form_wrapper input[type="submit"] {
-	 background: #f5ba1a;
+	 background: #9aa9e6;
 	 height: 35px;
 	 line-height: 35px;
 	 width: 100%;
@@ -150,10 +151,10 @@ body {
 	 transition: all 0.3s ease-in-out;
 }
  .form_wrapper input[type="submit"]:hover {
-	 background: #e1a70a;
+	 background: #A2C7E5;
 }
  .form_wrapper input[type="submit"]:focus {
-	 background: #e1a70a;
+	 background: #A2C7E5;
 }
  .form_wrapper input[type="checkbox"], .form_wrapper input[type="radio"] {
 	 border: 0;
@@ -284,10 +285,10 @@ body {
 	 z-index: 1;
 	 text-align: center;
 	 padding: 15px;
-	 color: #f5ba1a;
+	 color: #A2C7E5;
 }
  .credit a {
-	 color: #e1a70a;
+	 color: #A2C7E5;
 }
  @-webkit-keyframes check {
 	 0% {
