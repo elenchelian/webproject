@@ -192,7 +192,7 @@
 
 
                       <div class="input_field select_option">
-                        <select name="agentname">
+                        <select name="agent">
                           <option selected="true" disabled="disabled">Select a Agent</option>
                           <?php
                           $sql_agent = "SELECT * from agent ORDER BY id ASC;";
@@ -210,9 +210,8 @@
                       </div>
 
                     </td>
-                    <form action="agent.php?update=<?php echo $id;?>"method="post">
-                      <td><button type="submit" class="btn btn-success" onclick="return confirm('Are you sure want to Assig Agent for <?php echo $name;?> participant?');">Assign Agent</button></td>
-                    </form>
+
+                      <td><a href="agent.php?update=<?php echo $id;?>& agent=<?php echo $agent;?>" class="btn btn-success" onclick="return confirm('Are you sure want to Assig Agent for <?php echo $id;?> participant?');">Assign Agent</a></td>
                     </tr>
                     <?php
                         }

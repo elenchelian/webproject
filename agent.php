@@ -11,7 +11,7 @@
 $connection = mysqli_connect("localhost", "root", "", "insurance");
 if(isset($_GET['update'])){
 $id =$_GET['update'];
-$agent = $_REQUEST['agentname'];
+$agent = $_GET['agent'];
 $sql_update ="UPDATE participants SET agent='$agent' WHERE id='$id'";
 $result = $connection-> query($sql_update);
 }

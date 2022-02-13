@@ -181,7 +181,7 @@
                       <td><?php echo $email;?></td>
                       <td><?php echo $seminar;?></td>
                       <td><?php echo $agent;?></td>
-                      <td><a href="delete_participants.php?update=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> participant?');">Delete</a></td>
+                      <td><a href="delete_participants.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> participant?');">Delete</a></td>
                     </tr>
                     <?php
                         }
