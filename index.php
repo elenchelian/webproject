@@ -161,7 +161,6 @@ body, html {
           <p>Making major corporate decisions, managing the overall operations and resources of a company.</p>
           <br>
           <br>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -173,7 +172,6 @@ body, html {
           <p class="w3-opacity">Actuary</p>
           <p>Apply math and calculate premiums, forecast potential impact of catastrophes, analyse insurance rates for cars, homes, businesses and belongings.</p>
           <br>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -184,7 +182,6 @@ body, html {
           <h3><b>Sam Smith</b></h3>
           <p class="w3-opacity">Marketing Representative</p>
           <p>Create marketing strategies, conduct market research, develop brand positioning and promotional materials to develop and deliver products and services to meet customer needs.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -195,7 +192,6 @@ body, html {
           <h3><b>Wendy Kim</b></h3>
           <p class="w3-opacity">Loss Control Specialist</p>
           <p> Inspect and identify potential risks related to fire, crime, liability or accidents, understand large commercial and manufacturing risks where there are complex processes and many exposures to loss.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
