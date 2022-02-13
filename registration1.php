@@ -5,6 +5,7 @@
  ?>
 <!DOCTYPE html>
 <html>
+<head>
 <title>Seminar Regisration</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -115,14 +116,14 @@ body {
 	 background: #fafafa;
 }
  .form_wrapper input[type="text"]:focus, .form_wrapper input[type="email"]:focus, .form_wrapper input[type="password"],.form_wrapper input[type="number"]:focus {
-	 -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-	 -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-	 box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-	 border: 1px solid #f5ba1a;
+	 -webkit-box-shadow: 0 0 2px 1px rgba(0, 169, 255, 0.5);
+	 -moz-box-shadow: 0 0 2px 1px rgba(0, 169, 255, 0.5);
+	 box-shadow: 0 0 2px 1px rgba(0, 169, 255, 0.5);
+	 border: 1px solid #A2C7E5;
 	 background: #fafafa;
 }
 .backbtn{
-  background: #9aa9e6;
+  background: #3e5fe6;
   height: 35px;
   line-height: 35px;
   width: 100%;
@@ -135,7 +136,7 @@ body {
 
 }
  .form_wrapper input[type="submit"] {
-	 background: #9aa9e6;
+	 background: #3e5fe6;
 	 height: 35px;
 	 line-height: 35px;
 	 width: 100%;
@@ -421,7 +422,56 @@ body {
 	}
 }
 
+.upload-container {
+    position: relative;
+}
+.upload-container input {
+    border: 1px solid #a8b9ff;
+    background: #f1f1f1;
+    outline: 2px dashed #a8b9ff;
+    outline-offset: -10px;
+    padding: 50px 0px 100px 250px;
+    text-align: center !important;
+    width: 300px;
+}
+
+.upload-container input:hover {
+    background: #ddd;
+}
+
+.upload-container:before {
+    position: absolute;
+    bottom: 50px;
+    left: 150px;
+    content: " (or) Drag and Drop files here. ";
+    color: #2f54eb;
+    font-weight: 900;
+}
+
+.upload-btn {
+    margin-left: 100px;
+    padding: 7px 20px;
+}
+
 </style>
+
+<script>
+
+    function uploadFiles() {
+        var files = document.getElementById('file_upload').files;
+        if(files.length==0){
+            alert("Please first choose or drop any file(s)...");
+            return;
+        }
+        var filenames="";
+        for(var i=0;i<files.length;i++){
+            filenames+=files[i].name+"\n";
+        }
+        alert("Selected file(s) :\n____________________\n"+filenames);
+    }
+
+</script>
+</head>
 <body>
 <div class="form_wrapper">
   <div class="form_container">
@@ -460,6 +510,11 @@ body {
                 </select>
                 <div class="select_arrow"></div>
               </div>
+
+              <div class="upload-container">
+        			     <input type="file" id="file_upload" multiple />
+    			    </div>
+              <br>
 
             <div class="input_field checkbox_option">
             	<input type="checkbox" required name="terms" id="cb1">
