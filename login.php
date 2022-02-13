@@ -58,13 +58,12 @@ body, html {
   <div class="container">
     <div class="w3-top">
       <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+        <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="img/logo.png" alt="logo" style="width:20%"/></a>
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
           <a href="index.php#about" class="w3-bar-item w3-button">ABOUT</a>
-          <a href="index.php#team" class="w3-bar-item w3-button"><i class="fa fa-th"></i> POLICY</a>
-          <a href="index.php#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> POLICY</a>
-          <a href="index.php#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+          <a href="index.php#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> TEAM</a>
+          <a href="index.php#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> SEMINAR</a>
           <a href="login.php" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> LOGIN</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
