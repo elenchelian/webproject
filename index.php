@@ -140,8 +140,9 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/img/team2.jpg" alt="Michelle" style="width:100%">
+        <img src="img/team2.jpg" alt="team2" style="width:100%"/>
         <div class="w3-container">
+          <br>
           <h3>Michelle Moses</h3>
           <p class="w3-opacity">Art Director</p>
           <p>Manages a creative initiative from start to finish, guiding a cross-functional creative team in the conception, design and execution of visual materials</p>
@@ -151,7 +152,7 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="/img/team3.jpg" alt="Sam" style="width:100%">
+        <img src="img/team3.jpg" alt="team3" style="width:100%">
         <div class="w3-container">
           <h3>Sam Smith</h3>
           <p class="w3-opacity">Web Designer</p>
@@ -162,7 +163,7 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="team4.jpg" alt="Wendy" style="width:100%">
+        <img src="img/team4.jpeg" alt="team4" style="width:100%">
         <div class="w3-container">
           <h3>Wendy Kim</h3>
           <p class="w3-opacity">Designer</p>
