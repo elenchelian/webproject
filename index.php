@@ -25,6 +25,32 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+#pricing {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#pricing td, #pricing th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 15px;
+}
+
+#pricing tr:nth-child(even){background-color: #f2f2f2;}
+
+#pricing tr:hover {background-color: #ddd;}
+
+#pricing th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #353837;
+  color: white;
+  font-size: 15px;
+}
 </style>
 
 <head>
@@ -227,9 +253,9 @@ body, html {
 </div>
 
 <!-- Pricing Section -->
-<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-  <h4 class="card-title">Seminar List</h4>
-
+<div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
+  <h2 class="card-title"><b>Seminar List</b></h2>
+  <br>
   <div class="table-responsive">
     <table class="table table-hover">
       <thead>
