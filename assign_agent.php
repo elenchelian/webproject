@@ -2,7 +2,7 @@
         $conn = mysqli_connect("localhost", "root", "", "insurance");
         $sql_member = "SELECT * from participants ORDER BY id ASC;";
         $result_member = $conn-> query($sql_member);
-
+        $agentmail='';
 
 
         ?>
@@ -48,7 +48,7 @@
               <img src="img/elen.png" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              
+
               <a class="dropdown-item" href="login.php">
                 <i class="ti-power-off text-primary"></i>
                 Logout
@@ -157,9 +157,10 @@
                       <th>PHONE NUMBER</th>
                       <th>EMAIL</th>
                       <th>SEMINAR</th>
-                      <th>AGENT</th>
+                      <th>AGENT EMAIL</th>
                       <th>AGENT LIST</th>
-                      <th>Assign</th>
+                      <th>ASSIGN</th>
+                      <th>EMAIL AGENT</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -196,8 +197,9 @@
                                     while($row = mysqli_fetch_array($result_agent)){
                                       $ids = $row['id'];
                                       $agents = $row['name'];
+                                      $agentmail = $row['email'];
                                         ?>
-                            <option value="<?php echo $agents?>"><?php echo $agents?></option>
+                            <option value="<?php echo $agentmail?>"><?php echo $agents?></option>
                             <?php
                                 }
                              ?>
@@ -205,7 +207,14 @@
                         </div>
                     </td>
                       <td><button  class="btn btn-success">Assign Agent</button></td>
-                    </form>
+                      </form>
+                      <td>
+                        <form  action="mailto:<?php echo $agent;?>" method="post" enctype="text/plain" target="_blank">
+                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value="Dear Agent please contact <?php echo $name;?> <?php echo "\r\n"?> email :<?php echo $email;?> <?php echo "\r\n"?> Contact Number : <?php echo $phone_number;?> and provide them about the seminar details and please remind them one day before the seminar also."></p>
+                        <button type="submit" class="btn btn-success">Send Email</button>
+                      </form>
+                      </td>
+
                     </tr>
                     <?php
                         }
