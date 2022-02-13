@@ -145,7 +145,7 @@ body, html {
         <div class="w3-container" style="padding:20px 16px">
           <h3><b>Michelle Moses</b></h3>
           <p class="w3-opacity">Actuary</p>
-          <p>Apply math and calculate premiums, forecast potential impact of catastrophes, analyze insurance rates for cars, homes, businesses and belongings.</p>
+          <p>Apply math and calculate premiums, forecast potential impact of catastrophes, analyse insurance rates for cars, homes, businesses and belongings.</p>
           <br>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
