@@ -187,31 +187,31 @@
                       <td><?php echo $seminar;?></td>
                       <td><?php echo $agent;?></td>
 
-
+                      <form action="agent.php?update=<?php echo $id;?>" method="post">
                       <td>
 
+                        <div class="input_field select_option">
+                          <select name="agentname">
+                            <option selected="true" disabled="disabled">Select a Agent</option>
+                            <?php
+                            $sql_agent = "SELECT * from agent ORDER BY id ASC;";
+                            $result_agent = $conn-> query($sql_agent);
+                                    while($row = mysqli_fetch_array($result_agent)){
+                                      $ids = $row['id'];
+                                      $agents = $row['name'];
+                                        ?>
+                            <option value="<?php echo $agents?>"><?php echo $agents?></option>
+                            <?php
+                                }
+                             ?>
+                          </select>
 
-                      <div class="input_field select_option">
-                        <select name="agent">
-                          <option selected="true" disabled="disabled">Select a Agent</option>
-                          <?php
-                          $sql_agent = "SELECT * from agent ORDER BY id ASC;";
-                          $result_agent = $conn-> query($sql_agent);
-                                  while($row = mysqli_fetch_array($result_agent)){
-                                    $id = $row['id'];
-                                    $agent = $row['name'];
-                                      ?>
-                          <option value="<?php echo $agent?>"><?php echo $agent?></option>
-                          <?php
-                              }
-                           ?>
-                        </select>
+                        </div>
 
-                      </div>
 
                     </td>
-
-                      <td><a href="agent.php?update=<?php echo $id;?>& agent=<?php echo $agent;?>" class="btn btn-success" onclick="return confirm('Are you sure want to Assig Agent for <?php echo $id;?> participant?');">Assign Agent</a></td>
+                      <td><button  class="btn btn-success">Assign Agent</button></td>
+                    </form>
                     </tr>
                     <?php
                         }
