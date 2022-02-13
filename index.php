@@ -323,8 +323,10 @@ body, html {
         </button>
       </p>
     </form>
+    <br>
+    <br>
     <!-- Image of location/map -->
-    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+    <img src="img/map.png" class="w3-image w3-greyscale" style="width:1500px;height:500px;"margin-top:48px">
   </div>
 </div>
 
