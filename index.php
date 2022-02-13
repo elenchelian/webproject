@@ -201,10 +201,12 @@ body, html {
 <div class="w3-container w3-light-grey w3-padding-64">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>Gather all the information regarding your insurance policies<br>
-      and deliver it to you with detailed explaination</p>
-      <p>Make you feel safe and secure. Plan your expenses wisely<br>
+      <h2>Our Skills</h2>
+      <br>
+      <p style="font-size:100%;">Gather all the information regarding your insurance policies<br>
+      and deliver it to you with detailed explaination.</p>
+      <br>
+      <p style="font-size:100%;">Make you feel safe and secure. Plan your expenses wisely<br>
       Be a guidance to make your future BETTER!</p>
     </div>
     <div class="w3-col m6">
