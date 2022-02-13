@@ -126,24 +126,23 @@ body, html {
   <p class="w3-center w3-large">The pillar of this company</p>
   <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="img/team1.jpg" alt="team1" style="width:100%"/>
-        <div class="w3-container">
-          <br>
+      <div class="w3-card w3-dark-grey">
+        <img src="img/team11.png" alt="team1" style="width:100%"/>
+        <div class="w3-container" style="padding:20px 16px">
           <!-- <img src="/img/team1.jpg" alt="Tony" style="width:100%"/> -->
-          <h3>Tony Well</h3>
+          <h3><b>Tony Well</b></h3>
           <p class="w3-opacity">CEO & Founder</p>
           <p>Making major corporate decisions, managing the overall operations and resources of a company.</p>
+          <br>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="img/team2.jpg" alt="team2" style="width:100%"/>
-        <div class="w3-container">
-          <br>
-          <h3>Michelle Moses</h3>
+        <img src="img/team12.png" alt="team2" style="width:100%"/>
+        <div class="w3-container" style="padding:20px 16px">
+          <h3><b>Michelle Moses</b></h3>
           <p class="w3-opacity">Art Director</p>
           <p>Manages a creative initiative from start to finish, guiding a cross-functional creative team in the conception, design and execution of visual materials</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
@@ -151,21 +150,22 @@ body, html {
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="img/team3.jpg" alt="team3" style="width:100%">
-        <div class="w3-container">
-          <h3>Sam Smith</h3>
+      <div class="w3-card w3-dark-grey">
+        <img src="img/team13.png" alt="team3" style="width:100%">
+        <div class="w3-container" style="padding:20px 16px">
+          <h3><b>Sam Smith</b></h3>
           <p class="w3-opacity">Web Designer</p>
           <p>Create creative design and layout of a website or web pages</p>
+          <br>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="img/team4.jpeg" alt="team4" style="width:100%">
-        <div class="w3-container">
-          <h3>Wendy Kim</h3>
+        <img src="img/team14.png" alt="team4" style="width:100%">
+        <div class="w3-container" style="padding:20px 16px">
+          <h3><b>Wendy Kim</b></h3>
           <p class="w3-opacity">Designer</p>
           <p>Producing a host of ideas, selecting the best ones and selling them to the other members of the team and to clients.</p>
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
