@@ -46,7 +46,7 @@
               <img src="img/elen.png" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              
+
               <a class="dropdown-item" href="login.php">
                 <i class="ti-power-off text-primary"></i>
                 Logout
@@ -145,6 +145,8 @@
               <h4 class="card-title">Participant List</h4>
 
               <div class="table-responsive">
+
+
                 <table class="table table-hover">
                   <thead>
                     <tr>
@@ -156,6 +158,7 @@
                       <th>SEMINAR</th>
                       <th>AGENT</th>
                       <th>SUSPEND</th>
+                      <th>EMAIL</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -170,7 +173,9 @@
                                              $agent=$row['agent'];
 
                      ?>
+
                     <tr>
+
                       <td><?php echo $id;?></td>
                       <td><?php echo $name;?></td>
                       <td><?php echo $occupation;?></td>
@@ -179,6 +184,13 @@
                       <td><?php echo $seminar;?></td>
                       <td><?php echo $agent;?></td>
                       <td><a href="delete_participants.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> participant?');">Delete</a></td>
+                    
+                      <td>
+                        <form  action="mailto:<?php echo $email;?>" method="post" enctype="text/plain" target="_blank">
+                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value=" Dear <?php echo $name;?> you application for <?php echo $seminar;?> has been aproved.Hopefully you can make to the seminar"></p>
+                        <button type="submit" class="btn btn-success">Send Email</button>
+                      </form>
+                      </td>
                     </tr>
                     <?php
                         }
