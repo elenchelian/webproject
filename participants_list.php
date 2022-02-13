@@ -187,7 +187,7 @@
 
                       <td>
                         <form  action="mailto:<?php echo $email;?>" method="post" enctype="text/plain" target="_blank">
-                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value=" Dear <?php echo $name;?> your application for <?php echo $seminar;?> has been approved. Hope to see you in the seminar. Have a Good Day!"></p>
+                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value=" Dear <?php echo $name;?> your application for seminar <?php echo $seminar;?> has been approved. Hope to see you in the seminar. Have a Good Day!"></p>
                         <button type="submit" class="btn btn-success">Send Email</button>
                       </form>
                       </td>
