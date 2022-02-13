@@ -101,7 +101,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="adminlist.php">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li> -->
               </ul>
             </div>
           </li>
