@@ -82,7 +82,7 @@ body, html {
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-th"></i> TEAM</a>
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> SEMINAR</a>
       <a href="login.php" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> LOGIN</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -308,9 +308,9 @@ body, html {
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
   <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Kuala Lumpur, Malaysia</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +60 167849256</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: insurancemail@gmail.com</p>
+    <p style="font-size:150%;"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Kuala Lumpur, Malaysia</p>
+    <p style="font-size:150%;"><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +60 167849256</p>
+    <p style="font-size:150%;"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: insurancemail@gmail.com</p>
     <br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
