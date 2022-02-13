@@ -17,9 +17,22 @@ $phone_number =  $_REQUEST['phone_number'];
 $email =  $_REQUEST['email'];
 $seminar =  $_REQUEST['seminar'];
 
-$sql = "INSERT INTO participants VALUES ('id','$name','$occupation','$phone_number','$email','$seminar','-')";
+
+	$target_dir = "upload/";
+	$file = $_FILES['my_file'][$name];
+	$path = pathinfo($file);
+	$filename = $path['filename'];
+	$ext = $path['extension'];
+	$temp_name = $_FILES['my_file']['tmp_name'];
+	$path_filename_ext = $target_dir.$filename.".".$ext;
+
+
+
+
+$sql = "INSERT INTO participants VALUES ('id','$name','$occupation','$phone_number','$email','$seminar','-','$path_filename_ext')";
 
 $result = $connection-> query($sql);
+
 }
 ?>
 
