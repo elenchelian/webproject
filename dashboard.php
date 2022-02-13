@@ -40,7 +40,7 @@
               <img src="img/elen.png" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              
+
               <a class="dropdown-item" href="login.php">
                 <i class="ti-power-off text-primary"></i>
                 Logout
@@ -95,7 +95,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="adminlist.php">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li> -->
               </ul>
             </div>
           </li>

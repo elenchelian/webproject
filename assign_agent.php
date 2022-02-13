@@ -13,7 +13,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Skydash Admin</title>
+  <title>Assign Agent</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -103,7 +103,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="adminlist.php">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
-                <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li> -->
               </ul>
             </div>
           </li>
@@ -210,7 +210,7 @@
                       </form>
                       <td>
                         <form  action="mailto:<?php echo $agent;?>" method="post" enctype="text/plain" target="_blank">
-                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value="Dear Agent please contact <?php echo $name;?> <?php echo "\r\n"?> Email :<?php echo $email;?> <?php echo "\r\n"?> Contact Number : <?php echo $phone_number;?> to provide some important details regarding the seminar to the participants. Please remind them again one day prior to the seminar."></p>
+                        <p hidden><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" value="Dear Agent please contact <?php echo $name;?> <?php echo "\r\n"?> Email: <?php echo $email;?> <?php echo "\r\n"?> Contact Number: <?php echo $phone_number;?> to provide some important details regarding the seminar to the participants. Please remind them again one day prior to the seminar."></p>
                         <button type="submit" class="btn btn-success">Send Email</button>
                       </form>
                       </td>

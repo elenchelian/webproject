@@ -27,7 +27,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'Agent has been added',
+    title: 'Agent has been added successfully',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {

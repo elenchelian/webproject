@@ -27,7 +27,7 @@
           Swal({
             position: 'center',
             type: 'success',
-            title: 'Admin Account has been created',
+            title: 'Admin account has been successfully created',
             showConfirmButton: false,
             timer: 1500
           }).then(function() {

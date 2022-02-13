@@ -23,7 +23,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'Profile has been updated ',
+    title: 'Profile has been updated successfully',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {

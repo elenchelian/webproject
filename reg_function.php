@@ -28,7 +28,7 @@ function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'Seminar has been added Successfully',
+    title: 'Seminar has been added successfully',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {
