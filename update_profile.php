@@ -1,34 +1,15 @@
 <?php
-require_once "pdo.php";
-session_start();
-if ( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['id']) ) {
-    $sql = "UPDATE admin SET name = :name,
-             email = :email, password = :password
-            WHERE id = :id";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array(
-        ':name' => $_POST['name'],
-        ':email' => $_POST['email'],
-        ':password' => $_POST['password'],
-        ':id' => $_POST['id']));
-    $_SESSION['success'] = 'Record updated';
-    header( 'Location: index.php' ) ;
-    return;
-}
-$stmt = $pdo->prepare("SELECT * FROM admin where id = :1");
-$stmt->execute(array(":1" => $_GET['id']));
-$row = $stmt->fetch(PDO::FETCH_ASSOC);
-if ( $row === false ) {
-    $_SESSION['error'] = 'Bad value for user_id';
-    header( 'Location: index.php' ) ;
-    return;
-}
-$n = htmlentities($row['name']);
-$e = htmlentities($row['email']);
-$p = htmlentities($row['password']);
-$id = $row['id'];
-?>
+$connection = mysqli_connect("localhost", "root", "", "insurance");
+if(isset($_GET['update'])){
+$id =$_GET['update'];
+$name = $_GET['name'];
+$email = $_GET['email'];
 
+//
+// $sql_update ="UPDATE participants SET agent='$agentname' WHERE id='$id'";
+// $result = $connection-> query($sql_update);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,14 +49,11 @@ $id = $row['id'];
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
+              <img src="img/elen.png" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="ti-settings text-primary"></i>
-                Settings
-              </a>
-              <a class="dropdown-item">
+              
+              <a class="dropdown-item" href="login.php">
                 <i class="ti-power-off text-primary"></i>
                 Logout
               </a>
@@ -127,7 +105,7 @@ $id = $row['id'];
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="">Admin List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="adminlist.php">Admin List</a></li>
                 <li class="nav-item"> <a class="nav-link" href="addadmin.php">Add Admin</a></li>
                 <li class="nav-item"> <a class="nav-link" href="">Admin Activity Log</a></li>
               </ul>
@@ -141,9 +119,22 @@ $id = $row['id'];
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="">Register Seminar</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Partcipants List</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Assign Agent</a></li>
+                <li class="nav-item"><a class="nav-link" href="reg_seminar.php">Register Seminar</a></li>
+                <li class="nav-item"><a class="nav-link" href="seminar_list.php">Seminar List</a></li>
+                <li class="nav-item"><a class="nav-link" href="participants_list.php">Partcipants List</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#agent-element" aria-expanded="false" aria-controls="agent-element">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Agent</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="agent-element">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="add_agents.php">Add Agent</a></li>
+                <li class="nav-item"><a class="nav-link" href="assign_agent.php">Assign Agent</a></li>
               </ul>
             </div>
           </li>
@@ -167,16 +158,16 @@ $id = $row['id'];
                         <h4>Update Profile Details</h4>
                         <!-- <h6 class="font-weight-light"></h6> -->
 
-                        <form class="pt-3" method="post" action="add.php">
+                        <form class="pt-3" method="post" action="update.php?update=<?php echo $id;?>">
                           <!-- <p type="text"style="color:#FF0000;"><?php echo $status?></p> -->
                           <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email">
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email" value="<?php echo $email;?>" disabled>
                           </div>
                           <div class="form-group">
-                            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="name">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="name" value="<?php echo $name;?>" required>
                           </div>
                           <div class="form-group">
-                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">
+                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password" value="" required>
                           </div>
                           <div class="mt-3">
                             <input class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" name="submit" value="CREATE ACCOUNT">
