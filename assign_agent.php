@@ -121,6 +121,19 @@
                 <li class="nav-item"><a class="nav-link" href="reg_seminar.php">Register Seminar</a></li>
                 <li class="nav-item"><a class="nav-link" href="seminar_list.php">Seminar List</a></li>
                 <li class="nav-item"><a class="nav-link" href="participants_list.php">Partcipants List</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#agent-element" aria-expanded="false" aria-controls="agent-element">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Agent</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="agent-element">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="add_agents.php">Add Agent</a></li>
                 <li class="nav-item"><a class="nav-link" href="assign_agent.php">Assign Agent</a></li>
               </ul>
             </div>
@@ -137,6 +150,7 @@
               <h4 class="card-title">Assign Agent</h4>
 
               <div class="table-responsive">
+                <!-- <form class="pt-3" method="post" action="agent.php?update=<?php echo $id;?>"> -->
                 <table class="table table-hover">
                   <thead>
                     <tr>
@@ -178,7 +192,7 @@
 
 
                       <div class="input_field select_option">
-                        <select name="agent">
+                        <select name="agentname">
                           <option selected="true" disabled="disabled">Select a Agent</option>
                           <?php
                           $sql_agent = "SELECT * from agent ORDER BY id ASC;";
@@ -196,14 +210,16 @@
                       </div>
 
                     </td>
-
-                      <td><a href="agent.php?update=<?php echo $id;?>" class="btn btn-success" onclick="return confirm('Are you sure want to Assig Agent for <?php echo $name;?> participant?');">Assign Agent</a></td>
+                    <form action="agent.php?update=<?php echo $id;?>"method="post">
+                      <td><button type="submit" class="btn btn-success" onclick="return confirm('Are you sure want to Assig Agent for <?php echo $name;?> participant?');">Assign Agent</button></td>
+                    </form>
                     </tr>
                     <?php
                         }
                      ?>
                   </tbody>
                 </table>
+              <!-- </form> -->
               </div>
             </div>
           </div>
