@@ -6,34 +6,27 @@
   <script src="package/dist/sweetalert2.js"></script>
   <link rel="stylesheet" href="package/dist/sweetalert2.css">
 </head>
-<body
+<body>
 <?php
 $connection = mysqli_connect("localhost", "root", "", "insurance");
-if(isset($_GET['add'])){
-$id =$_GET['add'];
-$name =  $_REQUEST['name'];
-$occupation = $_REQUEST['occupation'];
-$phone_number =  $_REQUEST['phone_number'];
-$email =  $_REQUEST['email'];
-$seminar =  $_REQUEST['seminar'];
-
-$sql = "INSERT INTO participants VALUES ('id','$name','$occupation','$phone_number','$email','$seminar','-')";
-
-$result = $connection-> query($sql);
+if(isset($_GET['update'])){
+$id =$_GET['update'];
+$agent =  $_REQUEST['agent'];
+$sql_delete ="UPDATE participants SET agent='$agent' WHERE id='$id'";
+$result = $connection-> query($sql_delete);
 }
 ?>
-
 <body onload="JSalert()">
 <script type="text/javascript">
 function JSalert(){
   Swal({
     position: 'center',
     type: 'success',
-    title: 'Successfully Registered for the Seminar',
+    title: 'The Agent has been Assingned',
     showConfirmButton: false,
     timer: 1500
   }).then(function() {
-    window.location = "index.php";
+    window.location = "assign_agent.php";
 });
 }
 </script>

@@ -448,7 +448,7 @@ body {
 																					 $topic=$row['topic'];
 					        ?>
               <div class="input_field select_option">
-                <select>
+                <select name="seminar">
                   <option selected="true" disabled="disabled">Select a Seminar</option>
                   <option><?php echo $topic;?></option>
                 </select>

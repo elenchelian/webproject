@@ -119,7 +119,7 @@
                 <li class="nav-item"><a class="nav-link" href="reg_seminar.php">Register Seminar</a></li>
                 <li class="nav-item"><a class="nav-link" href="seminar_list.php">Seminar List</a></li>
                 <li class="nav-item"><a class="nav-link" href="participants_list.php">Partcipants List</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Assign Agent</a></li>
+                <li class="nav-item"><a class="nav-link" href="assign_agent.php">Assign Agent</a></li>
               </ul>
             </div>
           </li>
@@ -132,7 +132,7 @@
         <div style="margin:auto; width:auto" class="">
           <div  class="">
             <div style="margin:auto; " class="card-body" >
-              <h4 class="card-title">Seminar List</h4>
+              <h4 class="card-title">Participant List</h4>
 
               <div class="table-responsive">
                 <table class="table table-hover">
@@ -143,6 +143,7 @@
                       <th>OCCUPATION</th>
                       <th>PHONE NUMBER</th>
                       <th>EMAIL</th>
+                      <th>SEMINAR</th>
                       <th>AGENT</th>
                       <th>SUSPEND</th>
                     </tr>
@@ -155,6 +156,7 @@
                                              $occupation=$row['occupation'];
                                              $phone_number=$row['phone_number'];
                                              $email=$row['email'];
+                                             $seminar=$row['seminar'];
                                              $agent=$row['agent'];
 
                      ?>
@@ -164,8 +166,9 @@
                       <td><?php echo $occupation;?></td>
                       <td><?php echo $phone_number;?></td>
                       <td><?php echo $email;?></td>
+                      <td><?php echo $seminar;?></td>
                       <td><?php echo $agent;?></td>
-                      <td><a href="delete_participants.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> participant?');">Delete</a></td>
+                      <td><a href="delete_participants.php?update=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Delete this <?php echo $name;?> participant?');">Delete</a></td>
                     </tr>
                     <?php
                         }

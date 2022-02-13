@@ -1,6 +1,6 @@
 <?php
         $conn = mysqli_connect("localhost", "root", "", "insurance");
-        $sql_member = "SELECT * from admin ORDER BY id ASC;";
+        $sql_member = "SELECT * from participants ORDER BY id ASC;";
         $result_member = $conn-> query($sql_member);
 
         ?>
@@ -125,13 +125,14 @@
           </li>
         </ul>
       </nav>
+
       <!-- Main Dashboard container -->
     <div class="main-panel">
       <div class="content-wrapper">
         <div style="margin:auto; width:auto" class="">
           <div  class="">
             <div style="margin:auto; " class="card-body" >
-              <h4 class="card-title">Admin List</h4>
+              <h4 class="card-title">Assign Agent</h4>
 
               <div class="table-responsive">
                 <table class="table table-hover">
@@ -139,9 +140,13 @@
                     <tr>
                       <th>ID</th>
                       <th>NAME</th>
+                      <th>OCCUPATION</th>
+                      <th>PHONE NUMBER</th>
                       <th>EMAIL</th>
-                      <th>EDIT</th>
-                      <th>SUSPEND</th>
+                      <th>SEMINAR</th>
+                      <th>AGENT</th>
+                      <th>AGENT LIST</th>
+                      <th>Assign</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -149,15 +154,32 @@
                     while($row =mysqli_fetch_array($result_member,MYSQLI_ASSOC)){
                                              $id=$row['id'];
                                              $name=$row['name'];
+                                             $occupation=$row['occupation'];
+                                             $phone_number=$row['phone_number'];
                                              $email=$row['email'];
+                                             $seminar=$row['seminar'];
+                                             $agent=$row['agent'];
 
                      ?>
                     <tr>
                       <td><?php echo $id;?></td>
                       <td><?php echo $name;?></td>
+                      <td><?php echo $occupation;?></td>
+                      <td><?php echo $phone_number;?></td>
                       <td><?php echo $email;?></td>
-                      <td><button type="button" class="btn btn-success">Edit Profile</button></td>
-                      <td><a href="delete_admin.php?delete=<?php echo $id; ?>" class="btn btn-danger" onclick="return confirm('Are you sure want to Suspend this <?php echo $name;?> account?');">Delete</a></td>
+                      <td><?php echo $seminar;?></td>
+                      <td><?php echo $agent;?></td>
+                      <td>
+                      <div class="input_field select_option">
+                        <select name="agent">
+                          <option selected="true" disabled="disabled">Select a Agent</option>
+                          <option value="Elenchelian">Elenchelian a/l Selvan</option>
+                          <option value="Harvin">Harvin Raj a/l Rajesekaran</option>
+                        </select>
+                        <div class="select_arrow"></div>
+                      </div>
+                    </td>
+                      <td><a href="agent.php?update=<?php echo $id;?>" class="btn btn-success" onclick="return confirm('Are you sure want to Assig Agent for <?php echo $name;?> participant?');">Assign Agent</a></td>
                     </tr>
                     <?php
                         }

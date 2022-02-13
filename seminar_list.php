@@ -119,7 +119,7 @@
                 <li class="nav-item"><a class="nav-link" href="reg_seminar.php">Register Seminar</a></li>
                 <li class="nav-item"><a class="nav-link" href="seminar_list.php">Seminar List</a></li>
                 <li class="nav-item"><a class="nav-link" href="participants_list.php">Partcipants List</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Assign Agent</a></li>
+                <li class="nav-item"><a class="nav-link" href="assign_agent.php">Assign Agent</a></li>
               </ul>
             </div>
           </li>
