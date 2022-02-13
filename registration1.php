@@ -1,12 +1,21 @@
+<?php
+ $conn = mysqli_connect("localhost", "root", "", "insurance");
+ $sql_member = "SELECT * from seminar ORDER BY id ASC;";
+ $result_member = $conn-> query($sql_member);
+ ?>
 <!DOCTYPE html>
 <html>
 <title>Seminar Regisration</title>
-<!-- <link rel="stylesheet" href="registration.css"> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
 	 font-family: Verdana, Geneva, sans-serif;
 	 font-size: 14px;
-	 background: #f2f2f2;
+   animation: move 10s ease infinite;
+   transform: translate3d(0, 0, 0);
+   background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+   height: 100vh
 }
  .clearfix:after {
 	 content: "";
@@ -89,7 +98,7 @@ body {
  .form_wrapper .textarea_field > span > i {
 	 padding-top: 10px;
 }
- .form_wrapper input[type="text"], .form_wrapper input[type="email"], .form_wrapper input[type="password"] {
+ .form_wrapper input[type="text"], .form_wrapper input[type="email"], .form_wrapper input[type="password"],.form_wrapper input[type="number"]{
 	 width: 100%;
 	 padding: 8px 10px 9px 35px;
 	 height: 35px;
@@ -101,15 +110,28 @@ body {
 	 -ms-transition: all 0.3s ease-in-out;
 	 transition: all 0.3s ease-in-out;
 }
- .form_wrapper input[type="text"]:hover, .form_wrapper input[type="email"]:hover, .form_wrapper input[type="password"]:hover {
+ .form_wrapper input[type="text"]:hover, .form_wrapper input[type="email"]:hover, .form_wrapper input[type="password"],.form_wrapper input[type="number"]:hover {
 	 background: #fafafa;
 }
- .form_wrapper input[type="text"]:focus, .form_wrapper input[type="email"]:focus, .form_wrapper input[type="password"]:focus {
+ .form_wrapper input[type="text"]:focus, .form_wrapper input[type="email"]:focus, .form_wrapper input[type="password"],.form_wrapper input[type="number"]:focus {
 	 -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
 	 -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
 	 box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
 	 border: 1px solid #f5ba1a;
 	 background: #fafafa;
+}
+.backbtn{
+  background: #f5ba1a;
+  height: 35px;
+  line-height: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+
 }
  .form_wrapper input[type="submit"] {
 	 background: #f5ba1a;
@@ -407,49 +429,42 @@ body {
     </div>
     <div class="row clearfix">
       <div class="">
-        <form>
-          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-            <input type="email" name="email" placeholder="Email" required />
+        <form method="post" action="add_partcipant.php?add">
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <input type="text" name="name" placeholder="Enter Your Name" required />
           </div>
-          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-            <input type="password" name="password" placeholder="Password" required />
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-briefcase"></i></span>
+            <input type="text" name="occupation" placeholder="Enter Your Occupation" required />
           </div>
-          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-            <input type="password" name="password" placeholder="Re-type Password" required />
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+            <input type="number" name="phone_number" placeholder="Enter Your Phone Number" required />
           </div>
-          <div class="row clearfix">
-            <div class="col_half">
-              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" name="name" placeholder="First Name" />
-              </div>
-            </div>
-            <div class="col_half">
-              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                <input type="text" name="name" placeholder="Last Name" required />
-              </div>
-            </div>
+					<div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" placeholder="Enter Your Email" required />
           </div>
-            	<div class="input_field radio_option">
-              <input type="radio" name="radiogroup1" id="rd1">
-              <label for="rd1">Male</label>
-              <input type="radio" name="radiogroup1" id="rd2">
-              <label for="rd2">Female</label>
-              </div>
+
+					<?php
+									while($row =mysqli_fetch_array($result_member)){
+																					 $topic=$row['topic'];
+					        ?>
               <div class="input_field select_option">
                 <select>
-                  <option selected="true" disabled="disabled">Select a country</option>
-                  <option>Malaysia</option>
-                  <option>Singapore</option>
-                  <option>Indonesia</option>
-                  <option>Thailand</option>
+                  <option selected="true" disabled="disabled">Select a Seminar</option>
+                  <option><?php echo $topic;?></option>
                 </select>
                 <div class="select_arrow"></div>
               </div>
+              <?php
+                  }
+               ?>
             <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb1">
-    			<label for="cb1">I agree with terms and conditions</label>
+    			<!-- <label for="cb1">I agree with terms and conditions</label> -->
             </div>
           <input class="button" type="submit" value="Register" />
+
+          <button class="backbtn" ><a href="index.php">Back to MainPage</a></button>
+
         </form>
       </div>
     </div>
