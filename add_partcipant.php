@@ -16,16 +16,10 @@ $occupation = $_REQUEST['occupation'];
 $phone_number =  $_REQUEST['phone_number'];
 $email =  $_REQUEST['email'];
 $seminar =  $_REQUEST['seminar'];
+$filename = $_FILES['file1']['name'];
 
-$filename = $_POST['file1']['name'];
-
-
-            $sql = "INSERT INTO participants VALUES ('id','$name','$occupation','$phone_number','$email','$seminar','-','$filename')";
-
-            $result = $connection-> query($sql);
-
-
-
+  $sql = "INSERT INTO participants VALUES ('id','$name','$occupation','$phone_number','$email','$seminar','-','$filename')";
+  $result = $connection-> query($sql);
 }
 ?>
 
