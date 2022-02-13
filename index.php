@@ -308,7 +308,7 @@ body, html {
     <p style="font-size:150%;"><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +60 167849256</p>
     <p style="font-size:150%;"><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: insurancemail@gmail.com</p>
     <br>
-    <form action="/action_page.php" target="_blank">
+    <form  action="mailto:elenchelianelen@gmail.com" method="post" enctype="text/plain" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
@@ -322,7 +322,10 @@ body, html {
     <br>
     <br>
     <!-- Image of location/map -->
-    <img src="img/map.png" class="w3-image w3-greyscale" style="width:1500px;height:500px;"margin-top:48px">
+    <div style="width:100%">
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.3505778913436!2d101.70830431422132!3d2.999954754889602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdca83c67249b9%3A0x89de147a71901888!2sFSKTM%20UPM!5e0!3m2!1sen!2smy!4v1644751818091!5m2!1sen!2smy" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+  </div>
+    <!-- <img src="img/map.png" class="w3-image w3-greyscale" style="width:1500px;height:500px;"margin-top:48px"> -->
   </div>
 </div>
 
