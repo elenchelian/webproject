@@ -443,20 +443,23 @@ body {
             <input type="email" name="email" placeholder="Enter Your Email" required />
           </div>
 
-					<?php
-									while($row =mysqli_fetch_array($result_member)){
-																					 $topic=$row['topic'];
-					        ?>
+
               <div class="input_field select_option">
                 <select name="seminar">
                   <option selected="true" disabled="disabled">Select a Seminar</option>
+                  <?php
+                          while($row =mysqli_fetch_array($result_member)){
+                                                   $topic=$row['topic'];
+                          ?>
+
                   <option><?php echo $topic;?></option>
+                  <?php
+                      }
+                   ?>
                 </select>
                 <div class="select_arrow"></div>
               </div>
-              <?php
-                  }
-               ?>
+
             <div class="input_field checkbox_option">
             	<input type="checkbox" id="cb1">
     			<!-- <label for="cb1">I agree with terms and conditions</label> -->
